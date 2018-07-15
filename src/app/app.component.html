@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <input type="number" name="arrayvalue" #arrayvalue placeholder="Enter number to append"/>
+  <button (click)="addvalue(arrayvalue.value)">Append</button>
+  <br><br>
+  
+  <div>
+  Ascending Order:<label *ngFor='let n of array'>
+    {{n}},
+  </label>
+</div><br>
+<div>
+  Descending Order:<label *ngFor='let n of array.slice().reverse()'>
+    {{n}},
+  </label>
+</div>
+
+</div>
+
+
